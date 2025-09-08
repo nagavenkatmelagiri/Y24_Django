@@ -1,3 +1,4 @@
+from urllib import request
 from django.shortcuts import render
 
 # Create your views here.
@@ -8,3 +9,5 @@ def add(request):
     val2 = int(request.POST['num2'])
     res = val1 + val2
     return render(request, 'result.html', {'result': res})
+def dashboard(request):
+    return render(request,'dashboard.html')
